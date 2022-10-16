@@ -62,6 +62,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="value" nillable="true" type="q1:ArrayOfint" />
+        <xs:element minOccurs="0" name="isDescending" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

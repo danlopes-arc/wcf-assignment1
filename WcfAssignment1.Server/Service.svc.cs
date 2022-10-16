@@ -49,7 +49,8 @@ namespace WcfAssignment1.Server
         {
             return value
                 .ToString()
-                .Split()
+                .ToArray()
+                .Select(caracter => caracter.ToString())
                 .Aggregate(0, (int sum, string current) => sum + int.Parse(current));
         }
     }

@@ -40,10 +40,10 @@ namespace WcfAssignment1.Client.WcfService {
         System.Threading.Tasks.Task<string> MakeHtmlTagAsync(string tag, string value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/Sort", ReplyAction="http://tempuri.org/IService/SortResponse")]
-        int[] Sort(int[] value);
+        int[] Sort(int[] value, bool isDescending);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/Sort", ReplyAction="http://tempuri.org/IService/SortResponse")]
-        System.Threading.Tasks.Task<int[]> SortAsync(int[] value);
+        System.Threading.Tasks.Task<int[]> SortAsync(int[] value, bool isDescending);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -105,12 +105,12 @@ namespace WcfAssignment1.Client.WcfService {
             return base.Channel.MakeHtmlTagAsync(tag, value);
         }
         
-        public int[] Sort(int[] value) {
-            return base.Channel.Sort(value);
+        public int[] Sort(int[] value, bool isDescending) {
+            return base.Channel.Sort(value, isDescending);
         }
         
-        public System.Threading.Tasks.Task<int[]> SortAsync(int[] value) {
-            return base.Channel.SortAsync(value);
+        public System.Threading.Tasks.Task<int[]> SortAsync(int[] value, bool isDescending) {
+            return base.Channel.SortAsync(value, isDescending);
         }
     }
 }
