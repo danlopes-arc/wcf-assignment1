@@ -24,6 +24,6 @@ namespace WcfAssignment1.Server
         string MakeHtmlTag(string tag, string value);
 
         [OperationContract]
-        List<int> Sort(List<int> value);
+        List<int> Sort(List<int> value, bool isDescending = false);
     }
 }

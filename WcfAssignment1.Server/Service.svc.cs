@@ -35,8 +35,13 @@ namespace WcfAssignment1.Server
             return String.Join("", value.Reverse());
         }
 
-        public List<int> Sort(List<int> value)
+        public List<int> Sort(List<int> value, bool isDescending)
         {
+            if (isDescending)
+            {
+                return value.OrderByDescending(n => n).ToList();
+            }
+
             return value.OrderBy(n => n).ToList();
         }
 
